@@ -1,0 +1,208 @@
+.Modal {
+  position: fixed;
+  z-index: 200;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  top: 10%;
+  left: 27%;
+  width: 46%;
+  height: 80%;
+  transition: all 1s ease-out;
+}
+
+.ModalOpen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* opacity: 0 make the component disappear*/
+.ModalClosed {
+  opacity: 0;
+  transform: translateY(-150%);
+}
+
+.Button {
+  position: relative;
+  display: block;
+  left: 25%;
+  width: 50%;
+  height: 40px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  padding-bottom: 5.5%;
+  padding-top: 1.5%;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 32px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.carousel img {
+  height: 380px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.closeButton {
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border: 0.75px solid #333;
+  font-weight: 600;
+}
+
+.closeButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.projectTitle {
+  font-weight: 900;
+}
+
+.projectTechnology {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.projectDesc {
+  position: relative;
+  font-weight: 600;
+}
+
+.icon {
+  height: 12.5px;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 1800px) {
+  .Button {
+    font-size: 1.25rem;
+    padding-bottom: 0%;
+    padding-top: 0%;
+  }
+
+  .Modal {
+    top: 10%;
+    left: 32%;
+    width: 36%;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .carousel img {
+    height: 380px;
+    border-radius: 0;
+    object-fit: fill;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .Modal {
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Modal {
+    height: 82%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Modal {
+    top: 20%;
+    width: 80%;
+    left: 10%;
+  }
+
+  .Button {
+    font-size: 1rem;
+    padding-bottom: 1%;
+    padding-top: 1.5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Modal {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel {
+    margin-top: 17.5%;
+  }
+
+  .carousel img {
+    height: 300px;
+    border-radius: 0;
+    object-fit: fill;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .Modal {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel {
+    margin-top: 20%;
+  }
+
+  .carousel img {
+    height: 200px;
+    border-radius: 0;
+    object-fit: fill;
+  }
+  .projectDesc {
+    font-size: 0.65rem;
+  }
+  .Button {
+    font-size: 0.75rem;
+    padding-bottom: 1%;
+    padding-top: 1.5%;
+  }
+}

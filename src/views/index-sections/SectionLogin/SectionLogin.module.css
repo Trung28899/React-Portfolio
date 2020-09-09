@@ -1,0 +1,47 @@
+.contactCard {
+  position: relative;
+  background-color: #ff8f5e;
+  width: 60%;
+  left: 20%;
+
+  border-radius: 8px;
+  color: #fff;
+  margin: 20px 0 70px;
+  padding: 30px;
+}
+
+.contactCard h3 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.contactCardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.cardText {
+  font-weight: 500;
+  padding-top: 1%;
+}
+
+@media screen and (min-width: 768px) {
+  .contactCard {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contactCardGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  .contactCard {
+    width: 100%;
+    left: 0%;
+  }
+}

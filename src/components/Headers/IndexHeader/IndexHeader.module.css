@@ -1,0 +1,36 @@
+.textColor {
+  color: #d9534f;
+  font-weight: 500;
+}
+
+.landingText {
+  font-size: 6.5rem;
+}
+
+.button {
+  position: absolute;
+  z-index: 100;
+  top: 82%;
+}
+
+.button Button {
+  color: white;
+  border-color: white;
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 767px) {
+  .landingText {
+    font-size: 3.5rem;
+  }
+
+  .textColor {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .landingText {
+    font-size: 2.5rem;
+  }
+}
