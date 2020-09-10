@@ -75,9 +75,45 @@
   }
 }
 
+@media screen and (max-width: 1025px) {
+  .buttonStyle {
+    margin-top: 22.5px;
+  }
+
+  .togglePortion {
+    margin-bottom: 18%;
+  }
+
+  .projectName {
+    margin-top: -50%;
+  }
+
+  .techText {
+    font-size: 0.95rem;
+  }
+
+  .item img {
+    height: 200px;
+    width: 500px;
+    object-fit: cover;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .Title {
     margin-bottom: 12.5%;
+  }
+
+  .buttonStyle {
+    margin-top: 22.5px;
+  }
+
+  .togglePortion {
+    margin-bottom: 14.5%;
+  }
+
+  .projectName {
+    margin-top: -50%;
   }
 
   .projectListing {
@@ -85,8 +121,21 @@
   }
 
   .item img {
-    height: 200px;
+    height: 250px;
     width: 500px;
     object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .togglePortion {
+    margin-bottom: 16%;
+  }
+
+  .projectName {
+    margin-top: -58%;
+  }
+  .techText {
+    font-size: 0.75rem;
   }
 }
