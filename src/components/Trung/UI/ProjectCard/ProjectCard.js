@@ -8,6 +8,14 @@ function ProjectCard(props) {
   const projectName = ["h6", classes.projectName];
   const technologyText = [classes.techText];
   const [modalShow, setModalShow] = useState(false);
+  const dummyInfo = {
+    images: [],
+    projectName: "",
+    technology: "",
+    description: "",
+    siteUrl: "",
+    githubUrl: "",
+  };
 
   function showModal() {
     setModalShow(true);
@@ -58,11 +66,13 @@ function ProjectCard(props) {
             };
 
             Howevers, this will bring up the issue of loading while using the app
+
+            SOLVED THE PROBLEM OF LAZY LOADING MODAL
           */
           true ? (
             <Modal
               show={modalShow}
-              info={props.info}
+              info={modalShow ? props.info : dummyInfo}
               closeModal={closeModalProps}
             />
           ) : null

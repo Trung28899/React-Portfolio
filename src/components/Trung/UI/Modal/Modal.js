@@ -27,72 +27,92 @@ class Modal extends Component {
       this.props.show ? classes.ModalOpen : classes.ModalClosed,
     ];
 
-    const imagesArray = this.props.info.images;
-    const carouselItems = [];
+    let imagesArray = null;
+    let carouselItems = [];
 
-    imagesArray.map((image, index) => {
-      carouselItems.push({
-        src: image,
-        altText: "Slide " + index,
-        caption: "",
-        key: index,
+    if (this.props.show) {
+      imagesArray = this.props.info.images;
+      imagesArray.map((image, index) => {
+        carouselItems.push({
+          src: image,
+          altText: "Slide " + index,
+          caption: "",
+          key: index,
+        });
+        return carouselItems;
       });
-      return 1;
-    });
+    } else {
+      imagesArray = null;
+      carouselItems = [];
+    }
+
+    console.log("load: ", imagesArray);
 
     return (
       <div className={cssClasses.join(" ")}>
-        <UncontrolledCarousel
-          items={carouselItems}
-          className={classes.carousel}
-        />
-        <div>
-          <h3 className={classes.projectTitle}>
-            {this.props.info.projectName}
-          </h3>
-          <blockquote className="blockquote">
-            <p className={classes.projectTechnology + " mb-2 mt-2"}>
-              {this.props.info.technology}
-            </p>
-          </blockquote>
-          <p className={classes.projectDesc}>{this.props.info.description}</p>
-        </div>
+        {
+          // Must have this for lazy loading
+          this.props.show && (
+            <UncontrolledCarousel
+              items={carouselItems}
+              className={classes.carousel}
+            />
+          )
+        }
+
+        {
+          // Must have this for lazy loading
+          this.props.show && (
+            <div>
+              <h3 className={classes.projectTitle}>
+                {this.props.info.projectName}
+              </h3>
+              <blockquote className="blockquote">
+                <p className={classes.projectTechnology + " mb-2 mt-2"}>
+                  {this.props.info.technology}
+                </p>
+              </blockquote>
+              <p className={classes.projectDesc}>
+                {this.props.info.description}
+              </p>
+            </div>
+          )
+        }
 
         <p className={classes.closeButton} onClick={this.props.closeModal}>
           x
         </p>
 
-        <div className="mt-3">
-          <Button
-            className="mr-1 ml-1"
-            color="danger"
-            onClick={this.handleClickViewSite}
-          >
-            <img alt="view icon" className={classes.icon} src={arrowSVG} />
-            View Site
-          </Button>
-          <Button
-            className="mr-1 ml-1"
-            color="primary"
-            onClick={this.handleClickGitHub}
-          >
-            <img alt="github icon" src={githubSVG} className={classes.icon} />
-            Github
-          </Button>
-        </div>
+        {
+          // Must have this for lazy loading
+          this.props.show && (
+            <div className="mt-3">
+              <Button
+                className="mr-1 ml-1"
+                color="danger"
+                onClick={this.handleClickViewSite}
+              >
+                <img alt="view icon" className={classes.icon} src={arrowSVG} />
+                View Site
+              </Button>
+              <Button
+                className="mr-1 ml-1"
+                color="primary"
+                onClick={this.handleClickGitHub}
+              >
+                <img
+                  alt="github icon"
+                  src={githubSVG}
+                  className={classes.icon}
+                />
+                Github
+              </Button>
+            </div>
+          )
+        }
       </div>
     );
   }
 }
 
 export default Modal;
-
-/** 
- * <button
-          type="button"
-          className={classes.Button}
-          onClick={this.handleClick}
-        >
-        {this.props.buttonName}
-        </button>
-*/
