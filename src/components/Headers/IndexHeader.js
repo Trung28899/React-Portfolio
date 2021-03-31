@@ -3,6 +3,7 @@ import classes from "./IndexHeader/IndexHeader.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import fog from "../../assets/img/fog-low.png";
 
 // reactstrap components
 import { Container, Button } from "reactstrap";
@@ -18,7 +19,8 @@ function IndexHeader() {
         className="page-header section-dark"
         id="home"
         style={{
-          backgroundImage: "url(" + require("assets/img/header.jpg") + ")",
+          backgroundImage:
+            "url(https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2Fheader.jpg?alt=media&token=72ce5c9c-97ba-4b83-86f7-6c306b5aa8d6)",
         }}
       >
         <div className="filter" />
@@ -29,16 +31,16 @@ function IndexHeader() {
                 Hello, I'm <br /> Trung Trinh
               </h1>
               <div className="fog-low">
-                <img alt="..." src={require("assets/img/fog-low.png")} />
+                <img alt="Fog 1" src={fog} />
               </div>
               <div className="fog-low right">
-                <img alt="..." src={require("assets/img/fog-low.png")} />
+                <img alt="Fog2" src={fog} />
               </div>
             </div>
             <h2 className={textClass.join(" ")} color="info">
               I'm a{" "}
               <span style={{ color: "#0275d8", fontWeight: "650" }}>
-                React-JS
+                Front-End
               </span>{" "}
               Web Developer
             </h2>
@@ -48,7 +50,8 @@ function IndexHeader() {
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
+            backgroundImage:
+              "url(https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2Fclouds.png?alt=media&token=ceef938c-2376-4beb-891d-0a2930774fa4)",
           }}
         />
 
