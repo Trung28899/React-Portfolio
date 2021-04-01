@@ -1,15 +1,19 @@
-import React from "react";
-// react plugin used to create switch buttons
-// import Switch from "react-bootstrap-switch";
-// plugin that creates slider
-// import Slider from "nouislider";
+import React, { useEffect } from "react";
 import classes from "./SectionButtons/SectionButtons.module.css";
-
-// reactstrap components
 import { Container, Col } from "reactstrap";
+import AOS from "aos";
 
 function SectionButtons() {
   const topClasses = ["blockquote", classes.Title];
+  const avatar =
+    "https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2Favatar.jpg?alt=media&token=08f1bd82-670c-47a2-be43-e5acf92605df";
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  });
+
   return (
     <>
       <div
@@ -25,33 +29,56 @@ function SectionButtons() {
           </blockquote>
 
           <div className={classes.aboutMe}>
-            <div className={classes.aboutMeImage}>
+            <div className={classes.aboutMeImage} data-aos="fade-down">
               <Col className="mr-auto" md="10" sm="3">
                 <img
                   alt="..."
                   className="img-thumbnail img-responsive"
-                  src={require("../../assets/projectsImg/avatar.jpg")}
+                  src={avatar}
                 />
                 <p className="text-center">Trung Trinh</p>
               </Col>
             </div>
-            <div className={classes.aboutMeText}>
+            <div className={classes.aboutMeText} data-aos="fade-left">
               <p>
-                I am a software developer enthusiast. After achieved my
-                Associate Degree in Computer Engineer, I digged deeper into Web
-                Development and gained good efficiency with the MERN stack. I
-                have good commands in the following technologies: React-JS,
-                Redux, NodeJS, Express-JS, MySQL and MongoDB.
+                As a{" "}
+                <span className={classes.span}>
+                  People-oriented Frontend Developer
+                </span>
+                . I focus on Creating websites that does not confuse users and
+                Writing codes that does not upset readers.
+              </p>
+
+              <br />
+              <p>
+                My journey with Software Development started in 2018 while
+                finishing my Associate Degree in Computer Engineering.
+              </p>
+              <br />
+
+              <p>
+                3 years into development, I found myself in love with
+                actualizing my ideas and amaze people using technologies such
+                as: <br />
+                <span className={classes.span}>
+                  HTML5, CSS3, Javascript, React-JS, Redux, NodeJS, MongoDB,
+                  etc.
+                </span>
               </p>
               <br />
 
               <blockquote className="blockquote">
                 <h6 className={"mb-2 mt-2"}>Objectives</h6>
               </blockquote>
-              <p>
-                To obtain a Junior React-JS Developer position where I can
-                leverage my Computer Engineer education and technical skills
-                gained
+              <p data-aos="fade-up">
+                To Obtain a{" "}
+                <span className={classes.span}>
+                  {" "}
+                  Front End Web Developer position{" "}
+                </span>{" "}
+                where I can leverage my technical skills gained. Delivering
+                flawless and satisfying User Interface / User Experience on
+                daily basis
               </p>
             </div>
           </div>

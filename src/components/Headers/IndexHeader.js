@@ -39,10 +39,8 @@ function IndexHeader() {
             </div>
             <h2 className={textClass.join(" ")} color="info">
               I'm a{" "}
-              <span style={{ color: "#0275d8", fontWeight: "650" }}>
-                Front-End
-              </span>{" "}
-              Web Developer
+              <span style={{ color: "#0275d8", fontWeight: "650" }}>React</span>{" "}
+              Front-End Developer
             </h2>
           </Container>
         </div>
