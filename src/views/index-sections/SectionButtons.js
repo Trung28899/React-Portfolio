@@ -10,7 +10,7 @@ function SectionButtons() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 1000,
     });
   });
 
@@ -39,7 +39,7 @@ function SectionButtons() {
                 <p className="text-center">Trung Trinh</p>
               </Col>
             </div>
-            <div className={classes.aboutMeText} data-aos="fade-left">
+            <div className={classes.aboutMeText} data-aos="fade-down">
               <p>
                 As a{" "}
                 <span className={classes.span}>

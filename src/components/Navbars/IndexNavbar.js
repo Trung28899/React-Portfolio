@@ -1,6 +1,7 @@
 import React from "react";
+// nodejs library that concatenates strings
 import classnames from "classnames";
-import classes from "./NavBar.module.css";
+// reactstrap components
 import {
   Collapse,
   NavbarBrand,
@@ -11,6 +12,7 @@ import {
   Container,
   Button,
 } from "reactstrap";
+import classes from "./NavBar.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
@@ -152,13 +154,15 @@ function IndexNavbar() {
             </NavItem>
             <NavItem>
               <Button
-                className={classes.viewResumeButton + " btn-round"}
+                block
+                className={["btn-round", classes.viewResume].join(" ")}
                 type="button"
                 color="danger"
                 onClick={() =>
                   window.open("http://trevortrinh.com/documents/Resume.pdf")
                 }
               >
+                &nbsp;
                 <FontAwesomeIcon icon={faFileAlt} /> &nbsp; View Resume
               </Button>
             </NavItem>

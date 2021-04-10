@@ -2,4 +2,13 @@
   .viewResumeButton {
     position: relative;
   }
+
+  .burgerButton {
+    position: absolute;
+    right: 25vw;
+  }
+
+  .viewResume {
+    margin-left: -3.5vw !important;
+  }
 }
