@@ -1,118 +1,95 @@
-import React, { Component } from "react";
+import React from "react";
 import classes from "./Modal.module.css";
-import { Button } from "reactstrap";
+import { UncontrolledCarousel, Button } from "reactstrap";
 
-import { UncontrolledCarousel } from "reactstrap";
+const Modal = ({ info, show, closeModal }) => {
+  const modalContainer = [
+    classes.Modal,
+    show ? classes.ModalOpen : classes.ModalClosed,
+  ];
+  const carouselItems = [];
+  const descriptionText = [];
 
-import arrowSVG from "../../../../assets/projectsImg/arrow.svg";
-import githubSVG from "../../../../assets/projectsImg/github.svg";
+  info.images.map((value, index) =>
+    carouselItems.push({
+      src: value,
+      altText: "Slide " + index,
+      caption: "",
+      key: index,
+    })
+  );
 
-class Modal extends Component {
-  state = {
-    accountType: null,
-    url: null,
+  info.description.map((value, index) =>
+    descriptionText.push(
+      <p className={classes.projectDesc} key={index}>
+        {value}
+      </p>
+    )
+  );
+
+  const openLink = (link) => {
+    return window.open(link);
   };
 
-  handleClickGitHub = () => {
-    window.open(this.props.info.githubUrl);
-  };
-
-  handleClickViewSite = () => {
-    window.open(this.props.info.siteUrl);
-  };
-
-  render() {
-    const cssClasses = [
-      classes.Modal,
-      this.props.show ? classes.ModalOpen : classes.ModalClosed,
-    ];
-
-    let imagesArray = null;
-    let carouselItems = [];
-
-    if (this.props.show) {
-      imagesArray = this.props.info.images;
-      imagesArray.map((image, index) => {
-        carouselItems.push({
-          src: image,
-          altText: "Slide " + index,
-          caption: "",
-          key: index,
-        });
-        return carouselItems;
-      });
-    } else {
-      imagesArray = null;
-      carouselItems = [];
-    }
-
-    console.log("load: ", imagesArray);
-
-    return (
-      <div className={cssClasses.join(" ")}>
-        {
-          // Must have this for lazy loading
-          this.props.show && (
-            <UncontrolledCarousel
-              items={carouselItems}
-              className={classes.carousel}
-            />
-          )
-        }
-
-        {
-          // Must have this for lazy loading
-          this.props.show && (
-            <div>
-              <h3 className={classes.projectTitle}>
-                {this.props.info.projectName}
-              </h3>
-              <blockquote className="blockquote">
-                <p className={classes.projectTechnology + " mb-2 mt-2"}>
-                  {this.props.info.technology}
-                </p>
-              </blockquote>
-              <p className={classes.projectDesc}>
-                {this.props.info.description}
-              </p>
-            </div>
-          )
-        }
-
-        <p className={classes.closeButton} onClick={this.props.closeModal}>
-          x
+  return (
+    <div className={modalContainer.join(" ")}>
+      {carouselItems.length > 0 && (
+        <UncontrolledCarousel
+          items={carouselItems}
+          className={classes.carousel}
+        />
+      )}
+      <h3 className={classes.projectTitle}>{info.projectName}</h3>
+      <blockquote className="blockquote">
+        <p className={classes.projectTechnology + " mb-2 mt-2"}>
+          {info.technology}
         </p>
-
-        {
-          // Must have this for lazy loading
-          this.props.show && (
-            <div className="mt-3">
-              <Button
-                className="mr-1 ml-1"
-                color="danger"
-                onClick={this.handleClickViewSite}
-              >
-                <img alt="view icon" className={classes.icon} src={arrowSVG} />
-                View Site
-              </Button>
-              <Button
-                className="mr-1 ml-1"
-                color="primary"
-                onClick={this.handleClickGitHub}
-              >
-                <img
-                  alt="github icon"
-                  src={githubSVG}
-                  className={classes.icon}
-                />
-                Github
-              </Button>
-            </div>
-          )
-        }
+      </blockquote>
+      <div className={classes.descriptionContainer}>{descriptionText}</div>
+      <div className={classes.btnContainer}>
+        {info.siteUrl && (
+          <Button
+            color="danger"
+            className={[classes.btnStyle, classes.danger].join(" ")}
+            onClick={() => openLink(info.siteUrl || "")}
+          >
+            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i> View Site
+          </Button>
+        )}
+        {info.githubUrl && (
+          <Button
+            className={[classes.btnStyle, classes.inverse].join(" ")}
+            onClick={() => openLink(info.githubUrl || "")}
+          >
+            <i className="fab fa-github"></i> Source Code
+          </Button>
+        )}
+        {info.video[0] && (
+          <Button
+            className={[classes.btnStyle, classes.primary].join(" ")}
+            onClick={() => openLink(info.video[0] || "")}
+          >
+            <i className="far fa-eye"></i> App Demo 1
+          </Button>
+        )}
+        {info.video[1] && (
+          <Button
+            className={[classes.btnStyle, classes.primary].join(" ")}
+            onClick={() => openLink(info.video[1] || "")}
+          >
+            <i className="fas fa-eye"></i> App Demo 2
+          </Button>
+        )}
+        <Button className={classes.btnStyle} onClick={closeModal}>
+          <i className="fa fa-times" aria-hidden="true"></i>Dismiss
+        </Button>
       </div>
-    );
-  }
-}
+      <div className={classes.closeButton} onClick={closeModal}>
+        <i className="fa fa-times" aria-hidden="true"></i>
+      </div>
+    </div>
+  );
+};
 
 export default Modal;

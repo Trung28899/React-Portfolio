@@ -1,26 +1,6 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-
-// reactstrap components
 import {
   Button,
   Card,
@@ -32,10 +12,8 @@ import {
 
 import classes from "./SectionLogin/SectionLogin.module.css";
 
-// core components
-
 function SectionLogin() {
-  function contactButtonsHandler(contact) {
+  const contactButtonsHandler = (contact) => {
     switch (contact) {
       case "email":
         console.log("got in email");
@@ -55,14 +33,14 @@ function SectionLogin() {
 
       default:
     }
-  }
+  };
 
   return (
     <>
       <div
         className="section section-image section-login"
         style={{
-          backgroundImage: "url(" + require("assets/img/login-image.jpg") + ")",
+          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2FProjects%20Image%2Flogin-image.jpg?alt=media&token=4608418e-15f1-482e-ad46-3c6cbce1e758")`,
         }}
         id="contact"
       >

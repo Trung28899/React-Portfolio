@@ -1,16 +1,13 @@
 .Modal {
   position: fixed;
   z-index: 200;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: #ffffff;
-  padding: 10px;
+  border-radius: 12px;
+  background-color: rgb(243, 245, 246);
   text-align: center;
-  box-sizing: border-box;
-  top: 10%;
-  left: 27%;
-  width: 46%;
-  height: 80%;
+  width: 38vw;
+  height: 85vh;
+  top: 10vh;
+  left: 31vw;
   transition: all 1s ease-out;
 }
 
@@ -19,47 +16,9 @@
   transform: translateY(0);
 }
 
-/* opacity: 0 make the component disappear*/
 .ModalClosed {
   opacity: 0;
   transform: translateY(-150%);
-}
-
-.Button {
-  position: relative;
-  display: block;
-  left: 25%;
-  width: 50%;
-  height: 40px;
-  border-radius: 25px;
-  outline: none;
-  border: none;
-  background-image: linear-gradient(
-    to right,
-    #b8cbb8 0%,
-    #b8cbb8 0%,
-    #b465da 0%,
-    #cf6cc9 33%,
-    #ee609c 66%,
-    #ee609c 100%
-  );
-  font-size: 1.2rem;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 0.5s;
-  text-align: center;
-  padding-top: 10px;
-  margin-top: 10px;
-  text-decoration: none;
-  padding-bottom: 5.5%;
-  padding-top: 1.5%;
-}
-
-.container {
-  margin-top: 100px;
-  padding: 32px;
 }
 
 .carousel {
@@ -68,63 +27,114 @@
 }
 
 .carousel img {
-  height: 380px;
-  border-radius: 0;
-  object-fit: cover;
-}
-
-.closeButton {
-  position: fixed;
-  right: 1%;
-  bottom: 1%;
-  font-size: 1rem;
-  cursor: pointer;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: white;
-  border: 0.75px solid #333;
-  font-weight: 600;
-}
-
-.closeButton:hover {
-  background-color: black;
-  color: white;
+  height: 40vh !important;
+  border-radius: 12px !important;
 }
 
 .projectTitle {
+  font-size: 1.25rem !important;
   font-weight: 900;
 }
 
 .projectTechnology {
   position: relative;
-  font-weight: 500;
-  font-size: 1.05rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  color: #0275d8;
 }
 
 .projectDesc {
   position: relative;
   font-weight: 600;
+  font-size: 0.85rem !important;
 }
 
-.icon {
-  height: 12.5px;
-  color: white;
-  margin-right: 5px;
-  margin-bottom: 2px;
+.descriptionContainer {
+  position: relative;
+  left: 5% !important;
+  width: 90%;
+}
+
+.btnContainer {
+  position: absolute;
+  bottom: 5vh;
+  width: 95%;
+  left: 2.5%;
+  text-align: center;
+}
+
+.btnStyle {
+  margin: 0 0.25vw;
+  font-size: 0.7rem;
+  padding: 5px 15px;
+}
+
+.closeButton {
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+}
+
+.closeButton i {
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.closeButton i:hover {
+  color: #0275d8;
+}
+
+.inverse {
+  background-color: #292b2c !important;
+  border: 0.5px solid #292b2c !important;
+}
+
+.inverse:hover {
+  background-color: #161616 !important;
+  border: 0.5px solid #161616 !important;
+}
+
+.primary {
+  background-color: #0275d8 !important;
+  border: 0.5px solid #0275d8 !important;
+}
+
+.primary:hover {
+  background-color: #0088ff !important;
+  border: 0.5px solid #0088ff !important;
+}
+
+.success,
+.success:hover {
+  background-color: #5cb85c !important;
+  border: 0.5px solid #5cb85c !important;
+}
+
+.danger {
+  background-color: #d9534f !important;
+  border: 0.5px solid #d9534f !important;
+}
+
+.danger:hover {
+  background-color: #ff5f59 !important;
+  border: 0.5px solid #ff5f59 !important;
 }
 
 @media screen and (min-width: 1800px) {
-  .Button {
-    font-size: 1.25rem;
-    padding-bottom: 0%;
-    padding-top: 0%;
+  .Modal {
+    width: 28vw;
+    height: 60vh;
+    top: 15vh;
+    left: 36vw;
   }
 
-  .Modal {
-    top: 10%;
-    left: 32%;
-    width: 36%;
+  .carousel img {
+    height: 30vh !important;
+    object-fit: cover !important;
+  }
+
+  .projectTitle {
+    margin-top: 5vh;
   }
 }
 
@@ -136,73 +146,125 @@
   }
 }
 
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 900px) {
   .Modal {
-    height: 70%;
+    height: 80vh;
+    top: 10vh;
+  }
+
+  .carousel img {
+    object-fit: cover !important;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1025px) {
   .Modal {
-    height: 82%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .Modal {
-    top: 20%;
-    width: 80%;
-    left: 10%;
+    width: 100vw;
+    height: 100vh;
+    top: 0vh;
+    left: 0vw;
   }
 
-  .Button {
-    font-size: 1rem;
-    padding-bottom: 1%;
-    padding-top: 1.5%;
+  .carousel {
+    position: relative;
+    width: 100%;
+    top: 10vh !important;
+  }
+
+  .carousel img {
+    height: 40vh !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+  }
+
+  .projectTitle {
+    margin-top: 15vh;
+  }
+
+  .descriptionContainer {
+    position: relative;
+    left: 20% !important;
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .Modal {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-  }
-
   .carousel {
-    margin-top: 17.5%;
+    margin-top: 1vh !important;
   }
 
   .carousel img {
-    height: 210px;
-    border-radius: 0;
-    object-fit: fill;
+    height: 30vh !important;
+    object-fit: fill !important;
+  }
+
+  .projectTitle {
+    margin-top: 12vh;
+  }
+
+  .projectTechnology {
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem !important;
+  }
+
+  .descriptionContainer {
+    position: relative;
+    left: 2.5% !important;
+    width: 95%;
+  }
+
+  .btnContainer {
+    width: 95%;
+    left: 2%;
+  }
+
+  .btnStyle {
+    margin: 0.25vh 1vw;
+    font-size: 0.7rem;
+    padding: 4px 15px;
+  }
+
+  .closeButton {
+    font-size: 1.25rem !important;
+    bottom: 1vh;
+    right: 1vh;
   }
 }
 
 @media screen and (max-width: 321px) {
-  .Modal {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-  }
   .carousel {
-    margin-top: 20%;
+    margin-top: 8vh;
   }
 
   .carousel img {
-    height: 200px;
-    border-radius: 0;
-    object-fit: fill;
+    height: 35vh !important;
+    object-fit: fill !important;
   }
-  .projectDesc {
-    font-size: 0.65rem;
+
+  .projectTitle {
+    margin-top: 12vh;
+    font-size: 0.95rem !important;
   }
-  .Button {
-    font-size: 0.75rem;
-    padding-bottom: 1%;
-    padding-top: 1.5%;
+
+  .projectTechnology {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.65rem !important;
+  }
+
+  .descriptionContainer p {
+    font-size: 0.65rem !important;
+  }
+
+  .btnContainer {
+    width: 95%;
+    left: 2%;
+  }
+
+  .btnStyle {
+    margin: 0.25vh 1vw;
+    font-size: 0.5rem;
+    padding: 4px 15px;
   }
 }
