@@ -159,7 +159,9 @@ function IndexNavbar() {
                 type="button"
                 color="danger"
                 onClick={() =>
-                  window.open("http://trevortrinh.com/documents/Resume.pdf")
+                  window.open(
+                    "https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2FResume.pdf?alt=media&token=8eb1cc5c-418e-480a-b2f7-6d2cbde2bb43"
+                  )
                 }
               >
                 &nbsp;
