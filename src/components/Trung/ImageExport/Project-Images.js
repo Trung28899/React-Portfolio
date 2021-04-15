@@ -32,7 +32,7 @@ const otcvn = {
   ],
   description: [
     "This is the Official / E-Commerce Website for OnTheCard, Ltd - A leading Smart Business Card Solution in Vietnam.",
-    "The website was developed using HTML5 / CSS3, ES6 , Node-JS and server hosting in AWS EC2 instance.",
+    "The website was developed using HTML5 / CSS3, ES6 , Node-JS and server hosting with AWS EC2 instance.",
   ],
 };
 
@@ -43,8 +43,9 @@ const linkshort = {
     "https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2FProjects%20Image%2FLINKSHORT%2FScreen%20Shot%202021-04-02%20at%2011.35.17%20PM.png?alt=media&token=18865f80-895b-444b-964d-c0eae4755616",
   ],
   description: [
-    "This web application allows users to freely shorten their link with 6 different options of domain. Once shortened, the access link will take less than 2 seconds to redirect to the original link.",
-    "The web app is a free alternative option to link shortener solution such as bit.ly or cut.ly. Link Shortener was Developed using MERN stack, Redux for State Management, AWS and Firebase for hosting. The Application also support Progressive Web App (PWA) functionalities",
+    "The web app is a free alternative option to link shortener solution such as bit.ly or cut.ly",
+    "This web application allows users to freely shorten their link with 6 different options of domain.",
+    "Once shortened, the access link will take less than 2 seconds to redirect to the original link.",
   ],
 };
 
@@ -58,8 +59,8 @@ const otcvercel = {
     "https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2FProjects%20Image%2FOTC_VERCEL%2F6.png?alt=media&token=d1977851-93ab-4f47-b1e8-72dcc1cb5c48",
   ],
   description: [
-    "This website was to be developed as an official and e-commerce website for OnTheCard. However, there were a change of theme in the design so the website was left unused when it was 90% completed",
-    "This website was an opportunity for me to review and sharpen my Next-Js skill for better SEO and  performance. The website was developed using CSS3, React-JS, Next-JS and Material UI",
+    "This website was to be developed as an official and e-commerce website for OnTheCard. However, the website was left unused due to change of theme",
+    "This website was an opportunity for me to review and sharpen my Next-Js skill for better SEO and  performance.",
   ],
 };
 
@@ -110,7 +111,9 @@ const smartmirror = {
     "https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2FProjects%20Image%2FSMART_MIRROR%2FSmartMirrorscreen6.png?alt=media&token=a9c17264-88e6-454c-96dd-a41df5fcc71b",
   ],
   description: [
-    "Smart Mirror is an Android Native Application. Smart Mirror is used to control a Smart Mirror's microcontroller system via Firebase Real-time database. The application is developed with Android Studio and Java Programming language.",
+    "Smart Mirror is an Android Native Application. ",
+    "Smart Mirror is used to control a Smart Mirror's microcontroller system via Firebase Real-time database.",
+    "The application is developed with Android Studio and Java Programming language.",
   ],
 };
 
@@ -139,7 +142,7 @@ export const allProjects = {
   linkshort: {
     images: linkshort.images,
     projectName: "Link Shortener",
-    technology: "MERN / Redux / AWS / Firebase",
+    technology: "MERN / Redux / AWS / Firebase / PWA",
     description: linkshort.description,
     siteUrl: "https://linker.live/",
     githubUrl: "https://github.com/Trung28899/MERN-Link-Shortener",

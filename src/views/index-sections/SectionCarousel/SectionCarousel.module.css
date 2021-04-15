@@ -1,7 +1,14 @@
 .Title {
   font-weight: 1000;
-  margin-bottom: 7.5%;
+  margin-bottom: 0vh;
   font-size: 2rem;
+}
+
+.subTitle {
+  margin: 2.5vh auto;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.35rem;
 }
 
 .navTabs {
@@ -89,9 +96,17 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .projectListing {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardImg {
+    width: 500px;
+  }
+
+  .projectName {
+    margin-top: -40%;
   }
 }
 
@@ -108,7 +123,7 @@
   }
 
   .projectName {
-    margin-top: -42.5% !important;
+    margin-top: -40% !important;
   }
 
   .techText {
@@ -117,17 +132,29 @@
 
   .cardImg {
     height: 200px;
+    width: 500px;
     object-fit: cover;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .Title {
-    margin-bottom: 12.5%;
+@media screen and (max-width: 1000px) {
+  .cardImg {
+    height: 250px;
   }
 
+  .projectName {
+    margin-top: -50% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .buttonStyle {
     margin-top: 22.5px;
+  }
+
+  .subTitle {
+    margin: 2.5vh auto;
+    font-size: 1rem;
   }
 
   .togglePortion {
@@ -136,7 +163,7 @@
 
   .projectName {
     font-size: 1rem;
-    margin-top: -50% !important;
+    margin-top: -47% !important;
   }
 
   .techText {

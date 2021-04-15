@@ -6,7 +6,6 @@ import { allProjects } from "../../components/Trung/ImageExport/Project-Images";
 
 import Modal from "../../components/Trung/UI/Modal/Modal";
 import BackDrop from "../../components/Trung/UI/Backdrop/Backdrop";
-// import Loader from "../../components/Trung/UI/Loader/Loader";
 
 function SectionCarousel() {
   const defaultInfo = {
@@ -40,6 +39,9 @@ function SectionCarousel() {
       <div className="section pt-o" id="projects">
         <Container>
           <blockquote className={topClasses.join(" ")}>Projects</blockquote>
+          <h3 className={classes.subTitle}>
+            My Recent Brainchilds <i className="fa fa-heart heart" />
+          </h3>
           <div className={[classes.projectListing, "text-center"].join(" ")}>
             {keys.map((value, index) => (
               <ProjectCard
