@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.613630a5.chunk.css",
+    "main.css": "/static/css/main.4fca5fff.chunk.css",
     "main.js": "/static/js/main.94723941.chunk.js",
     "main.js.map": "/static/js/main.94723941.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c06cd905.js",
@@ -8,7 +8,7 @@
     "static/js/2.b3495f10.chunk.js": "/static/js/2.b3495f10.chunk.js",
     "static/js/2.b3495f10.chunk.js.map": "/static/js/2.b3495f10.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.613630a5.chunk.css.map": "/static/css/main.613630a5.chunk.css.map",
+    "static/css/main.4fca5fff.chunk.css.map": "/static/css/main.4fca5fff.chunk.css.map",
     "static/js/2.b3495f10.chunk.js.LICENSE.txt": "/static/js/2.b3495f10.chunk.js.LICENSE.txt",
     "static/media/fog-low.965eab52.png": "/static/media/fog-low.965eab52.png",
     "static/media/paper-kit.scss?v=1.2.0": "/static/media/nucleo-icons.ec16bc4c.woff2"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.c06cd905.js",
     "static/js/2.b3495f10.chunk.js",
-    "static/css/main.613630a5.chunk.css",
+    "static/css/main.4fca5fff.chunk.css",
     "static/js/main.94723941.chunk.js"
   ]
 }
